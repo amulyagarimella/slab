@@ -1,25 +1,25 @@
 {% extends "base.html" %}
 
 {% block title %}
-    New Protocol
+New Protocol
 {% endblock %}
 
 {% block main %}
-    <h1 class="mb-3 mt-3">Add a protocol</h1>
+<h1 class="mb-3 mt-3">Add a protocol</h1>
 
-    <form action="/new" method="post">
-      <div class="form-group mb-3">
-        <div class="input-group">
-          {{ form.title(class="form-control", placeholder="Protocol Title", type="text") }}
-        </div>
-      </div>
+<form action="/new" method="post">
+  <div class="form-group mb-3">
+    <div class="input-group">
+      {{ form.title(class="form-control", placeholder="Protocol Title", type="text") }}
+    </div>
+  </div>
 
-      <div class="form-group mb-3">
-        {{ form.text(class="form-control", placeholder="Protocol text goes here. Each step must be on its own line. No need to number steps!", type="text",rows=15) }}
-      </div>
+  <div class="form-group mb-3">
+    {{ form.text(class="form-control", placeholder="Protocol text goes here. Each step must be on its own line. No need to number steps!", type="text",rows=15) }}
+  </div>
 
-      {{ form.hidden_tag() }}
+  {{ form.hidden_tag() }}
 
-      {{ form.submit(class="btn btn-dark") }}
-    </form>
+  {{ form.submit(class="btn btn-dark") }}
+</form>
 {% endblock %}
