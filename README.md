@@ -4,7 +4,7 @@
 Slab is a web app that'll help you keep track of your lab protocols. Slab's workflow looks like this: first, submit a list describing your lab protocol. Slab will break down the protocol into individual steps. Then, each time you use a protocol, edit and make notes on it!
 
 ## Video
-[See Slab in action here.](https://youtu.be/2kuf4lVb_9A)
+[See Slab in action here.](https://youtu.be/ga-sN-8bggM)
 
 ## App structure overview
 * `slab/`
