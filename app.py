@@ -73,7 +73,7 @@ def register():
 	else:
 		# If there were validation errors, flash these
 		flash_errors(form)
-		return render_template('register.html', form=form)
+	return render_template('register.html', form=form)
 
 # Login page
 @app.route('/login', methods=['GET', 'POST'])
@@ -101,10 +101,10 @@ def login():
 		else:
 			flash("Incorrect password, try again.")
 			return redirect('/login')
-		else:
+	else:
 		# If there were validation errors, flash these
 		flash_errors(form)
-		return render_template('login.html', form=form)
+	return render_template('login.html', form=form)
 
 # Logout
 @app.route('/logout')
@@ -144,7 +144,7 @@ def new():
 	else:
 		# Flash any validation errors
 		flash_errors(form)
-		return render_template('new.html', form=form)
+	return render_template('new.html', form=form)
 
 # Protocol editing page
 # Takes ID of protocol as a URL parameter
@@ -161,7 +161,7 @@ def edit(p_id):
 		form.title.data = protocol.title
 		for i in range(len(step_list)):
 			form.steps.append_entry(vars(step_list[i]))
-		elif form.validate_on_submit():
+	elif form.validate_on_submit():
 		# If it's a POST request and validation checks pass, get the new data from the form and use it to update protocol and step objects
 		protocol.title = form.title.data
 		protocol.time_updated = datetime.datetime.now(tz=pytz.utc)
@@ -169,13 +169,13 @@ def edit(p_id):
 			step_list[i].text = form.steps[i].text.data
 			step_list[i].note = form.steps[i].note.data
 			step_list[i].time_taken = form.steps[i].time_taken.data
-			db.session.commit()
-			flash("Protocol saved!")
-			return redirect('/index')
-		else:
+		db.session.commit()
+		flash("Protocol saved!")
+		return redirect('/index')
+	else:
 		# Flash validation errors
 		flash_errors(form)
-		return render_template('/edit.html', form=form, protocol = protocol, steps = step_list)
+	return render_template('/edit.html', form=form, protocol = protocol, steps = step_list)
 
 # Protocol view page
 @app.route('/protocols')
@@ -189,4 +189,4 @@ def view():
 @app.errorhandler(HTTPException)
 def handle_bad_request(e):
 	# Display error page
-	return render_template('/error.html', e=str(e))
+    return render_template('/error.html', e=str(e))
