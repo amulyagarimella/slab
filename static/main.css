@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap');
+
+body {
+	font-family: 'Karla', sans-serif;
+	font-weight: 400;
+	background-color: #f8f8f8;
+}
+
+nav.navbar {
+	background-color: #f8f8f8 !important;
+}
+
+h1,h2,h3,h4 {
+	font-weight: 600;
+}
+
+b, h2.nl {
+	font-weight: 700 !important;
+}
+
+.navbar-text {
+	color: black !important;
+}
+
+.borderless {
+	border:  none !important;
+}
+
+.big-form {
+	font-size: 1.5em;
+	font-weight: 600;
+	border-color: #DFDFDF;
+}
+
+.input-label {
+	font-weight: 600;
+}
+
+a.clickable-card,a.clickable-card:hover {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+.clickable-card:hover {
+	background-color: #dfdfdf;
+	color: #4A5056;
+	transition: background-color .5s;
+	transition: color .5s;
+}
+
+.message {
+	background-color: #dfdfdf;
+	border-radius: 5px;
+	padding: 1%;
+	display: inline-block;
+	font-weight: 500;
+}
+
+footer {
+	bottom: 0;
+}

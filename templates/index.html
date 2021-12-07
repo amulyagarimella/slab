@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <div class = "row">
+        <div class = "col-5 mt-5">
+            <h1 class="mb-4">Welcome to Slab</h1>
+
+            <h2 class="mb-3">Protocols made easy</h2>
+            <p class="mb-3">
+                Slab helps you keep track of your lab protocols by splitting them into steps that are easy to edit and annotate.
+            </p>
+
+            <h2 class="mb-3">Intutive workflow</h2>
+            <p>
+                Simply submit a list describing your lab protocol. Slab breaks it down for you.
+            </p>
+
+            <h2 class="mb-3">Easy storage</h2>
+            <p>
+                Store unlimited protocols with unlimited steps. Edit them anytime. Annotate them over and over again.
+            </p>
+        </div>
+        <div class="col-6">
+            <img src="/static/gummy-medical-lab.svg", class="img-fluid">
+        </div>
+    </div>
+{% endblock %}
