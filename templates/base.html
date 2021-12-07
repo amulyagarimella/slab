@@ -26,7 +26,7 @@
 	<body>
 		<nav class="navbar navbar-expand-sm navbar-light bg-light">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="/index">
+				<a class="navbar-brand px-3" href="/index">
 					<img src="{{url_for('static', filename='slab.svg')}}",width="90" height="90" class="logo">
 				</a>
 
@@ -62,7 +62,7 @@
 				</div>
 			</div>
 		</nav>
-		<main class="container-fluid px-4 mb-0">
+		<main class="container-fluid px-5 mb-0">
 			{% with messages = get_flashed_messages() %}
 			    {% if messages %}
 			        {% for msg in messages %}
@@ -73,7 +73,7 @@
 			{% block main %}
 			{% endblock %}
 		</main>
-		<footer class="small text-left px-4 text-muted mt-2">
+		<footer class="small text-left px-5 text-muted mt-2">
 			&copy; Amulya Garimella 2021. Illustrations from <a href="https://illlustrations.co">Vijay Verma.</a> 
         </footer>
 	</body>
