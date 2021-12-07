@@ -36,7 +36,6 @@ app.add_template_filter(tzconvert)
 # Help: https://stackoverflow.com/questions/44941757/sqlalchemy-exc-operationalerror-sqlite3-operationalerror-no-such-table
 @app.before_first_request
 def create_tables():
-	db.drop_all()
 	db.create_all()
 
 # Homepage
