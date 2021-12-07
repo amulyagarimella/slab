@@ -40,10 +40,17 @@ git clone https://github.com/amulyagarimella/slab.git
 cd path/to/slab
 ```
 3. Create and activate your virtual environment (optional but recommended!)
-```
-python -m venv venv
-. venv/bin/activate
-```
+    * macOS/Linux: 
+    ```
+    python3 -m venv venv
+    . venv/bin/activate
+    ```
+    * Windows (not tested):
+    ```
+    py -3 -m venv venv
+    venv\Scripts\activate
+    ```
+
 If this works, your command line should have `(venv)` in front of each line.
 
 4. Install the app requirements
