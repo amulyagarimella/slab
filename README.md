@@ -33,7 +33,7 @@ Slab is a web app that'll help you keep track of your lab protocols. Slab's work
 ## Getting started
 1. Clone this repository (or download zip file)
 ```
-git clone https://github.com/amulyagarimella/slab-cs50
+git clone https://github.com/amulyagarimella/slab.git
 ```
 2. Go to the app directory
 ```
