@@ -1,31 +1,22 @@
 {% extends "base.html" %}
 
 {% block title %}
-Edit | {{ protocol.title }}
+    Edit | {{ protocol.title }}
 {% endblock %}
 
 {% block main %}
-    <!-- {% for step in steps %}
-        <div class="card mb-3">
-          <div class="card-body">
-            {{ step.text }}
-          </div>
-        </div>
-        {% endfor %} -->
-
-        <form action="{{ url_for('edit', p_id=protocol.id) }}" method="post">
-            {{ form.title(type="text", class="form-control big-form mb-3 mt-3") }}
-            {% for i in range(form.steps | length) %}
+    <form action="{{ url_for('edit', p_id=protocol.id) }}" method="post">
+        {{ form.title(type="text", class="form-control big-form mb-3 mt-3") }}
+        {% for i in range(form.steps | length) %}
             {{ form.steps[i].hidden_tag() }}
             <ul class="list-group mb-3">
                 <li class="list-group-item"><span class="input-label">Step {{ i + 1 }}</span> {{ form.steps[i].text(type="text", class="form-control borderless") }}</li>
                 <li class="list-group-item"><span class="input-label">Add notes</span> {{ form.steps[i].note(type="text", class="form-control borderless") }}</li>
                 <li class="list-group-item"><span class="input-label">Time taken</span>{{ form.steps[i].time_taken(type="text", class="form-control borderless") }}</li>
             </ul>
-            {% endfor %}
+        {% endfor %}
 
-            {{ form.hidden_tag() }}
-            {{ form.submit(class="btn btn-dark") }}
-        </form>
-
-        {% endblock %}
+        {{ form.hidden_tag() }}
+        {{ form.submit(class="btn btn-dark") }}
+    </form>
+{% endblock %}

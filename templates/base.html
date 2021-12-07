@@ -38,39 +38,39 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     {% if current_user.is_authenticated %}
-                    <ul class="navbar-nav mr-auto mt-auto">
-                        <li class="nav-item"><a class="nav-link" href="/index"><h2 class="nl">Home</h2></a></li>
-                        <li class="nav-item"><a class="nav-link" href="/new"><h2 class="nl">New protocol</h2></a></li>
-                        <li class="nav-item"><a class="nav-link" href="/protocols"><h2 class="nl">My protocols</h2></a></li>
-                    </ul>
+                        <ul class="navbar-nav mr-auto mt-auto">
+                            <li class="nav-item"><a class="nav-link" href="/index"><h2 class="nl">Home</h2></a></li>
+                            <li class="nav-item"><a class="nav-link" href="/new"><h2 class="nl">New protocol</h2></a></li>
+                            <li class="nav-item"><a class="nav-link" href="/protocols"><h2 class="nl">My protocols</h2></a></li>
+                        </ul>
 
                     {% else %}
 
-                    <ul class="navbar-nav mr-auto mt-auto">
-                        <li class="nav-item"><a class="nav-link" href="/index"><h2 class="nl">Home</h2></a></li>
-                        <li class="nav-item"><a class="nav-link" href="/login"><h2 class="nl">Log in</h2></a></li>
-                        <li class="nav-item"><a class="nav-link"  href="/register"><h2 class="nl">Register</h2></a></li>
-                    </ul>
+                        <ul class="navbar-nav mr-auto mt-auto">
+                            <li class="nav-item"><a class="nav-link" href="/index"><h2 class="nl">Home</h2></a></li>
+                            <li class="nav-item"><a class="nav-link" href="/login"><h2 class="nl">Log in</h2></a></li>
+                            <li class="nav-item"><a class="nav-link"  href="/register"><h2 class="nl">Register</h2></a></li>
+                        </ul>
                     {% endif %}
                 </div>
             </div>
             <div class="navbar-nav">
                 {% if current_user.is_authenticated %}
-                <span class="navbar-text"><h4><b>{{ current_user.name }}</b> @{{ current_user.username }}</h4></span>
-                <ul class="navbar-nav mr-auto mt-auto">
-                    <li class="nav-item"><a class="nav-link" href="/logout"><h4 class="nl">Log out</h4></a></li>
-                </ul>
+                    <span class="navbar-text"><h4><b>{{ current_user.name }}</b> @{{ current_user.username }}</h4></span>
+                    <ul class="navbar-nav mr-auto mt-auto">
+                        <li class="nav-item"><a class="nav-link" href="/logout"><h4 class="nl">Log out</h4></a></li>
+                    </ul>
                 {% endif %}
             </div>
         </div>
     </nav>
     <main class="container-fluid px-5 mb-0">
         {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        {% for msg in messages %}
-        <div class="message mt-1">{{ msg }}</div>
-        {% endfor %}
-        {% endif %}
+            {% if messages %}
+                {% for msg in messages %}
+                <div class="message mt-1">{{ msg }}</div>
+                {% endfor %}
+            {% endif %}
         {% endwith %}
         
         {% block main %}

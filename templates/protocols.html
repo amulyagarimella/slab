@@ -1,27 +1,26 @@
 {% extends "base.html" %}
 
 {% block title %}
-My Protocols
+    My Protocols
 {% endblock %}
 
 {% block main %}
-<h1 class="mb-3 mt-3">My protocols</h1>
+    <h1 class="mb-3 mt-3">My protocols</h1>
 
-{% for protocol in protocols %}
-<a href = "{{ url_for('edit', p_id=protocol.id) }}" class="clickable-card">
-    <div class="card mb-3 clickable-card">
-        <div class="card-body">
-            <h5 class="card-title">{{ protocol.title }}</h5>
-            Last edited: {{ (protocol.time_updated | tzconvert ).strftime("%A %m/%d/%y @ %I:%M %p") }}
-            <br>
-            Created: {{ ( protocol.time_created | tzconvert ).strftime("%A %m/%d/%y @ %I:%M %p") }}
-        </div>
-    </div>
-</a>
-{% endfor %}
+    {% for protocol in protocols %}
+        <a href = "{{ url_for('edit', p_id=protocol.id) }}" class="clickable-card">
+            <div class="card mb-3 clickable-card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ protocol.title }}</h5>
+                    Last edited: {{ (protocol.time_updated | tzconvert ).strftime("%A %m/%d/%y @ %I:%M %p") }}
+                    <br>
+                    Created: {{ ( protocol.time_created | tzconvert ).strftime("%A %m/%d/%y @ %I:%M %p") }}
+                </div>
+            </div>
+        </a>
+    {% endfor %}
 
-{% if (protocols | length) == 0 %}
-<p class="mb-5">You haven't created any protocols yet. Click New Protocol to create one!</p>
-{% endif %}
-
+    {% if (protocols | length) == 0 %}
+        <p class="mb-5">You haven't created any protocols yet. Click New Protocol to create one!</p>
+    {% endif %}
 {% endblock %}

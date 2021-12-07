@@ -39,6 +39,9 @@ Slab is different than a typical ELN because it splits protocols into steps, cre
 ##### Bootstrap
 I use Bootstrap to build and style Slab. Bootstrap's elegant and easy-to-use premade components make it easier to create a nice-looking website with the functionality I need.
 
+##### jQuery
+I use jQuery to add some dynamic functionality to Slab. Via jQuery, autocomplete is turned off for every input and the "active" class is automatically attached to active links.
+
 ##### Flask & Python
 I use Flask and Python to create Slab's backend. I chose to use Flask to build my app not only because I have the most familiarity with Python, but also because there are a wide array of Flask extensions and frameworks that make app-building much easier and more intuitive.
 

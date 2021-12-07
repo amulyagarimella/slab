@@ -28,7 +28,7 @@ Slab is a web app that'll help you keep track of your lab protocols. Slab's work
         * `register.html` Registration page.
 
 ## Tech
-* Frontend: HTML, CSS, Jinja
+* Frontend: HTML, CSS, Jinja, jQuery
 * Backend: Python, Flask
 * Database: SQLAlchemy
 * Frameworks used: Bootstrap (frontend), Flask-SQLAlchemy, Flask-Login, WTForms (backend)
