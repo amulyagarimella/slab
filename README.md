@@ -45,6 +45,7 @@ python -m venv venv
 . venv/bin/activate
 ```
 If this works, your command line should have `(venv)` in front of each line.
+
 4. Install the app requirements
 ```
 pip install -r requirements.txt
