@@ -6,6 +6,10 @@ Slab is a web app that'll help you keep track of your lab protocols. Slab's work
 ## Video
 [See Slab in action here.](https://youtu.be/ga-sN-8bggM)
 
+
+https://user-images.githubusercontent.com/8853022/149584290-8ace141c-fd24-41bc-824c-c114c6b134bb.mov
+
+
 ## App structure overview
 * `slab/`
     * `README.md` Getting started and using Slab. You are here!📍
